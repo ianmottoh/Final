@@ -1,28 +1,31 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, Button, ImageBackground, StyleSheet } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
     return (
-       <View>
-           <Text>Home Screen</Text>
-           <Button 
-                title="Go to component Screen"
-                onPress={() => navigation.navigate('Component')}
-           />
-           <Button 
-                title="Go to friend Screen"
-                onPress={() => navigation.navigate('Friend')}
-           />
-           <Button 
-                title="Go to image Screen"
-                onPress={() => navigation.navigate('Image')}
-           />
-            <Button 
-                title="Go to counter Screen"
-                onPress={() => navigation.navigate('Counter')}
-           />
-       </View>
+      <ImageBackground source={require('../assets/background.jpg')} style={{ width: '100%', height: '100%' }}>   
+          <View>
+               <Text style={styles.title}>Katalog Laptop 2019</Text>
+               <Button
+                    title="Buka Katalog"
+                    
+                    type="outline"
+                    color=""
+                    onPress={() => navigation.navigate('Image')}
+               />
+
+          </View>
+       </ImageBackground>
     );
 };
 
 export default HomeScreen;
+
+const styles = StyleSheet.create({
+     title: {
+          textAlign: 'center',
+          color: 'white',
+          fontSize: 35,
+          marginVertical: 100
+     }
+   });

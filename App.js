@@ -13,9 +13,16 @@ const navigator = createStackNavigator({
 },{
   initialRouteName: 'Home',
   defaultNavigationOptions: {
-    headerTitle: 'InfoLepi',
+    headerTitle: 'INFOLEPI',
     headerStyle: {
       backgroundColor: 'black'
+    },
+    headerTintColor: 'white',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      padding: 20
     }
   }
 });
