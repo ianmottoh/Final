@@ -2,24 +2,20 @@ import React from 'react';
 import { createStackNavigator, createAppContainer} from 'react-navigation';
 
 import { StyleSheet, Text, View } from 'react-native';
-import ComponentScreen from './screens/ComponentScreen';
 import FriendScreen from './screens/FriendScreen';
 import HomeScreen from './screens/HomeScreen';
 import ImageScreen from './screens/ImageScreen';
-import CounterScreen from './screens/CounterScreen';
 
 const navigator = createStackNavigator({
-  Component: ComponentScreen,
   Friend: FriendScreen,
   Home: HomeScreen,
-  Image: ImageScreen,
-  Counter: CounterScreen
+  Image: ImageScreen
 },{
   initialRouteName: 'Home',
   defaultNavigationOptions: {
-    headerTitle: 'App Mobile Programming',
+    headerTitle: 'InfoLepi',
     headerStyle: {
-      backgroundColor: 'grey'
+      backgroundColor: 'black'
     }
   }
 });
